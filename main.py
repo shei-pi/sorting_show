@@ -12,7 +12,7 @@ logging.basicConfig(
 )
 if __name__ == "__main__":
 
-    l = list(range(200))
+    l = list(range(1, 100))
     random.shuffle(l)
 
     algo_plotter = SortingAlgoPlotter(["bubble_sort"])
