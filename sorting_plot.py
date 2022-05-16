@@ -37,7 +37,7 @@ class SortingAlgoPlotter:
                 bar_rects = self.bar_map_rects[k]
             except KeyError:
                 bar_rects = self._init_bar(k, algo_arrays[k])
-
+            ax.set_title(k)
             for rect, h in zip(bar_rects, algo_arrays[k]):
                 rect.set_height(h)
 

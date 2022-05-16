@@ -14,20 +14,18 @@ logging.basicConfig(
 )
 if __name__ == "__main__":
 
-    l = list(range(1, 50))
+    l = list(range(1, 30))
     random.shuffle(l)
 
     algo_plotter = SortingAlgoPlotter(["bubble_sort", "insertion_sort"])
 
-    # for a in bubble_sort_gen(l):
-    #     with LogTimer("Update Charts and plot"):
-    #         algo_plotter.plot_results({"bubble_sort": a})
+    for a in bubble_sort_gen(l):
+        with LogTimer("Update Charts and plot"):
+            algo_plotter.plot_results({"bubble_sort": a})
 
-    # random.shuffle(l)
-    # for a in insertion_sort_gen(l):
-    #     with LogTimer("Update Charts and plot"):
-    #         algo_plotter.plot_results({"insertion_sort": a})
+    random.shuffle(l)
+    for a in insertion_sort_gen(l):
+        with LogTimer("Update Charts and plot"):
+            algo_plotter.plot_results({"insertion_sort": a})
 
-    for a in merge_sort(l):
-        print(a)
     input("Press any key...")
